@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<title>MAPIT</title>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+        <script type="text/javascript" charset="utf-8" src="js/jquery-1.8.2.min.js"></script> 
+		<script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.2.0.min.js"></script> 
+        <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script> 
+	</head>
+	<body>
+		<div data-role="page" id="Contacts">
+			<div data-role="header" data-position="fixed">
+				<a href="#" class='ui-btn-left' data-icon="refresh">Refresh</a>
+				<h1>Contacts</h1>
+				<a href="#" class="ui-btn-right" data-icon="add">Add</a>
+			</div>
+			
+			<div data-role="content">
+				<ul data-role="listview" data-inset="false" data-filter="true">
+					<li>
+						<a>
+							<img src="img/bw.jpg"></img>
+							<h3>Jim Joseph</h3>
+							<p>Map And IT Solutions Ltd</p>
+						</a>
+					</li>
+					<li>
+						<a>
+							<img src="../bw.jpg"></img>
+							<h3>Rob Daniel</h3>
+							<p>Google</p>
+						</a>
+					</li>
+					<li>
+						<a>
+							<img src="../bw.jpg"></img>
+							<h3>Bob Bradley</h3>
+							<p>Bryden & Partners</p>
+						</a>
+					</li>					
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>&copy; 2014 Map And IT Solutions Ltd</h4>
+			</div>
+			
+		</div>
+	<div data-role="page" id="ContactDetails">
+			<div data-role="header" data-position="fixed">
+				<a href="#" class='ui-btn-left'>Cancel</a>
+				<h1>Contact Details</h1>
+				<a href="#" class="ui-btn-right">Save</a>
+			</div>
+			
+			<div data-role="content">
+				<form>
+					...
+					<div data-role="fieldcontain">
+						<label for="firstname">First Name:</label>
+						<input type="text" name="firstname" id="firstname" value="Jim"
+							data-mini="true">
+					</div>					
+					<div data-role="fieldcontain">
+						<label for="lastname">Last Name:</label>
+						<input type="text" name="lastname" id="lastname" value="Joseph"
+							data-mini="true">
+					</div>	
+					<div data-role="fieldcontain">
+						<label for="company">Company:</label>
+						<input type="text" name="Company" id="Company" value="Map And IT Solutions Ltd"
+							data-mini="true">
+					</div>	
+					...
+				</form>			
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>&copy; 2014 Map And IT Solutions Ltd</h4>
+			</div>
+			
+		</div>	
+		<div data-role="page" id="Map">
+			<div data-role="header" data-position="fixed">
+				<a href="#">Back</a>
+				<h1>Map</h1>
+			</div>
+			<div data-role="content" id="map_canvas"></div>
+			<div data-role="footer" class="ui-bar" data-position="fixed">
+				
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#" id="addressTab_button"
+							class="ui-btn-active ui-state-persist">Address</a></li>
+						<li><a href="#" id="streetviewTab_button">Street View</a></li>
+						<li><a href="#" id="directionsTab_button">Directions To</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

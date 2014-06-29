@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<title>&nbsp;</title>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+        <script type="text/javascript" charset="utf-8" src="js/jquery-1.8.2.min.js"></script> 
+		<script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.2.0.min.js"></script> 
+        <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script> 
+	</head>
+	<body>
+		<div data-role="page" id="page1">
+			<div data-role="header">
+				<h1>BUSSTOP APP</h1>
+			</div>
+			
+			<div data-role="content">
+				<h3></h3>
+				<p>
+					This is page 1
+					
+					<div id="phoneDiv" data-role="fieldcontain">
+						  <label for="phone">Phone:</label>      
+						  <input id="phone" name="phone" type="text"/>
+					</div>
+					
+					<div id="stateDiv" data-role="fieldcontain">
+					  <label id="stateLabel" for="state">State*</label>       
+					  <select id="state" name="state_r" tabindex="2">
+					    <option value="ZZ">Please select a state</option>
+					    <option value="AL">Alabama</option>
+					    <option value="AK">Alaska</option>
+					    <option value="AZ">Arizona</option>
+					    ...
+					  </select>
+					</div>
+				</p>
+			</div>
+			
+			<div data-role="footer">
+				<h4>&copy; 2014 Map And IT Solutions Ltd</h4>
+			</div>
+		</div>
+		<!-- /page 1 -->
+	</body>
+</html>
+<script>
+	document.addEventListener("deviceready", onDeviceReady, false);
+
+	function onDeviceReady() {
+		document.addEventListener("pause", onPause, false);
+		document.addEventListener("resume", onResume, false);
+		alert("Device is Ready");
+
+	}
+
+
+//What to do when paused
+function onPause(){
+	
+	alert("paused!");
+}
+
+//What to do when resumed
+function onResume()
+{
+	
+	alert("resume");
+}
+</script>
